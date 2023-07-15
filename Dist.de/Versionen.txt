@@ -1,0 +1,473 @@
+		    Die Entwicklung von LetMeType
+
+1.81
+----
+
+- Die Vorschläge werden nicht mehr über simulierte Tastendrücke,
+  sondern über die Zwischenablage eingegeben. Dadurch gibt es 
+  keine Probleme mehr mit Sonderzeichen, die von der aktuellen 
+  Tastaturbelegung nicht unterstützt werden.
+
+- Das Symbol im Infobereich der Taskleiste wird wieder dauerhaft
+  angezeigt. Ausserdem lassen sich sowohl die Vorschläge als auch
+  das Lernen neuer Worte durch Klicken auf das Symbol abschalten.
+
+Veröffentlicht: 19.8.2002
+
+
+1.8
+---
+
+- Zum Simulieren der Tastendrücke wird eine andere Systemfunktion
+  benutzt, die schneller und zuverlässiger arbeitet.
+
+- Zum Erkennen von Tastendrücken wird ebenfalls eine neue
+  Methode verwendet. Dadurch funktioniert LetMeType jetzt z.B.
+  auch in Borland Delphi.
+
+- LetMeType funktioniert jetzt auch in MS Intelligent Forms,
+  wie sie u.a. im Internet Explorer benutzt werden.
+
+- Man kann eine Liste von Anwendungen angeben, die entweder
+  von LetMeType ignoriert werden, oder auf die LetMeType sich
+  beschränkt. Auf die Weise können Sie LetMeType in Ihrer
+  Entwicklungsumgebung aktivieren und im Mailprogramm ruhigstellen.
+
+- Die Vorschläge können mit der Maus ausgewählt werden.
+
+- Worte, die nur ein- oder zweimal aufgetreten sind, werden beim
+  automatischen Aufräumen des Wortschatzes wieder wie andere Worte 
+  behandelt.
+
+- Das Symbol im Infobereich der Taskleiste wird nur noch angezeigt, 
+  wenn LetMeType minimiert ist.
+
+Veröffentlicht: 4.6.2002
+
+
+1.79
+----
+
+- Das Hinzufügen von zu ignorierenden Kennworten funktioniert wieder.
+
+Veröffentlicht: 5.3.2002
+
+
+1.78
+----
+
+- LetMeType wird nicht länger als Shareware vertrieben, sondern kann
+  inklusive Quelltext frei gemäß der GNU General Public License 
+  kopiert werden. Die Einschränkungen der Sharewareversion sind entfallen.
+
+- Es ist nicht mehr möglich, die Wortschatzdatei zu verschlüsseln.
+  Bevor Sie von einer älteren Version umsteigen, müssen Sie den
+  Wortschatz unverschlüsselt speichern.
+
+Veröffentlicht: 15.2.2002
+
+
+1.77
+----
+
+- Worte, die nur ein- oder zweimal aufgetreten sind, werden schon
+  nach maximal 10 bzw. 20 Tagen gelöscht.
+- Bei den Vorschläge werden Worte bevorzugt, die erst vor kurzem 
+  benutzt wurden.
+- In Windows-Paßwortfeldern werden keine Vorschläge mehr gemacht,
+  wenn diese Felder ignoriert werden (Datei - Einstellungen).
+- Das Schließen des Programmfensters beendet LetMeType nicht mehr,
+  sondern versteckt nur das Fenster. Beenden läßt sich LetMeType nur
+  noch über den Menüpunkt "Datei - Beenden".
+- Wenn "Ziffernblock" unter "Datei - Einstellungen" abgeschaltet ist,
+  können Vorschläge von LetMeType nur noch über die normalen 
+  Zifferntasten ausgewählt werden. Der Ziffernblock wird dadurch frei
+  für die Eingabe von Zahlen.
+
+Veröffentlicht: 11.1.2000
+
+
+1.76
+----
+
+- Menüpunkt "Datei - Importieren" zum Hinzufügen von Worten aus einer
+  Wortschatzdatei.
+
+- Das Abschalten von "Optionen - Zwischenablage lesen" wirkt jetzt
+  wieder dauerhaft. In der letzten Version wurde diese Funktion bei
+  jedem Start von LetMeType reaktiviert.
+- Worte, die LetMeType beim automatischen Lesen der Zwischenablage zum
+  Wortschatz hinzufügt, werden nicht gespeichert, wenn der Wortschatz
+  schreibgeschützt ist.
+
+Veröffentlicht: 10.10.1999
+
+
+1.75
+----
+
+- Die Zeit, nach der das Vorschlagsfenster automatisch verschwindet,
+  kann unter Datei - Einstellungen geändert werden.
+- Das Vorschlagsfenster kann relativ zur Schreibmarke verschoben
+  werden, und es kann neben dem Mauszeiger angezeigt werden. Außerdem
+  erscheint nach dem Verschieben des Fensters ein Dialog, mit dem sich
+  diese Einstellungen ändern lassen.
+
+- Unter Outlook Express 5 gab es Probleme bei der simulierten Eingabe
+  von Umlauten, weil OE5 eine Taste abfängt, die eigentlich von keinem
+  Windows-Programm benutzt werden darf. LetMeType umgeht diese
+  Inkompatibilität.
+
+Veröffentlicht: 13.9.1999
+
+
+1.74
+----
+
+- Das Speichern von Zahlen kann abgeschaltet werden.
+
+- Beim Starten wurde die in einer Verknüpfung gewählte Fenstergröße
+  (z.B. Minimiert) nicht zuverlässig übernommen.
+- Nach dem Löschen oder Ändern von Worten wurde der Wortschatz nicht
+  als geändert markiert und somit manchmal nicht gespeichert.
+
+Veröffentlicht: 14.8.1999
+
+
+1.73
+----
+
+LetMeType wird mit einem einfach zu bedienenden Installationsprogramm
+ausgeliefert, das außerdem eine automatische Deinstallation ermöglicht.
+An LetMeType selbst hat sich nichts geändert.
+
+Veröffentlicht: 21.7.1999
+
+
+1.72
+----
+
+- Vorschläge und das Lernen neuer Worte lassen sich unabhängig 
+  voneinander abschalten.
+- LetMeType läßt sich durch Anklicken des Symbols in der Taskleiste
+  schnell deaktivieren und wieder einschalten. Außerdem ist das Symbol
+  immer sichtbar und zeigt den deaktivierten Zustand durch ein 
+  rotes Kreuz an.
+- "Worte" können jetzt auch mit einer Ziffer beginnen.
+- Optional lernt LetMeType Worte, die Sie in Paßwortfelder eingeben.
+  (Bisher wurden solche Eingaben immer ignoriert.)
+
+Veröffentlicht: 20.7.1999
+
+
+1.71
+----
+
+- Wenn das automatische Lesen der Zwischenablage abgeschaltet wurde, 
+  stürzte LetMeType beim nächsten Start ab.
+- Leerzeichen im Pfad von LetMeType.exe führten dazu, daß die Zuordnung
+  von Wortschatzdateien zur Anwendung nicht funktionierte.
+
+Veröffentlicht: 16.6.1999
+
+
+1.7
+---
+
+- LetMeType kann Texte aus der Zwischenablage automatisch zum
+  Wortschatz hinzufügen.
+- LetMeType erkennt einige zusätzliche russische Buchstaben.
+
+- Die in einer Verknüpfung mit LetMeType.exe oder einem Dokument angegebene
+  Fenstergröße (z.B. "minimiert") wurde bisher ignoriert.
+- Beim Einlesen von Texten kam es unter WinNT manchmal zum Absturz.
+- Der Registrierungsschlüssel ist nicht mehr so leicht zu fälschen.
+
+Veröffentlicht: 11.6.1999
+
+
+1.64
+----
+
+- Statt der normalen Ziffern kann auch ausschließlich der numerische 
+  Tastaturblock zur Auswahl der Vorschläge verwendet werden.
+- Kontextmenü für die Wortliste.
+
+- Das Einlesen von Texten aus der Zwischenablage funktionierte nicht immer.
+
+Veröffentlicht: 27.3.1999
+
+
+1.63
+----
+
+- Unter WinNT kam es beim Beenden einiger Anwendungen zu Fehlermeldungen,
+  wenn LetMeType im Hintergrund lief.
+
+Veröffentlicht: 22.2.1999
+
+
+1.62
+----
+
+- Im Dialog "In Worten zulässige Zeichen" findet sich ein russischer
+  Buchstabe.
+
+- LetMeType funktioniert nun auch mit Tastaturbelegungen, bei denen sich
+  Caps-Lock nur auf bestimmte Tasten auswirkt.
+- Die Zuordnung zwischen .lmt-Dateien und dem Programm funktioniert besser,
+  insbesondere kann man durch Doppelklick eine solche Datei in einer bereits
+  laufenden Kopie von LetMeType öffnen.
+- Das Trayicon verschwand manchmal auf mysteriöse Weise.
+
+Veröffentlicht: 17.2.1999
+
+
+1.61
+----
+
+Behobene Fehler:
+
+- Unter WinNT kam es beim automatischen Tippen von Zeichen wie "\" zu 
+  Problemen.
+
+Veröffentlicht: 14.2.1999
+
+
+1.6
+---
+
+- Der Zeichensatz des Vorschlagsfensters kann vom Benutzer geändert werden.
+
+- Das automatische Tippen von Zeichen, die wie "á" mehrere Tasten-
+  anschläge bei der Eingabe erfordern, funktioniert jetzt.
+
+Veröffentlicht: 18.1.1999
+
+
+1.53
+----
+
+- Die Arbeitsweise des Schreibschutzes hat sich geändert. Statt das Hinzufügen
+  neuer Worte ganz zu verhindern, sorgt er jetzt nur noch dafür, daß neu 
+  getippte Worte nicht in der Wortschatz-Datei gespeichert werden. Während 
+  LetMeType läuft, stehen die neuen Worte hingegen im Wortschatz. 
+  Außerdem werden Worte, die mit "Datei - Text lesen" eingelesen wurden,
+  grundsätzlich permanent gespeichert.
+
+Veröffentlicht: 12.12.1998
+
+
+1.52 
+----
+
+- Ein neues Wort, das in einem Paßwortfeld eingegeben wurde, wird von
+  LetMeType nicht gespeichert. (Funktioniert nur mit dem Standardfeld
+  von Windows, in dem die eingegebenen Zeichen durch Sterne ersetzt 
+  werden.)
+
+Veröffentlicht: 29.11.1998
+
+
+1.51
+----
+
+- Die Groß-/Kleinschreibung des ersten Buchstabens kann beim Berechnen der
+  Vorschläge ignoriert werden.
+- Die maximale Größe des Wortschatzes wurde auf 20 MByte, das maximale
+  Alter unbenutzter Worte auf 720 Tage heraufgesetzt.
+
+- Das automatische Tippen funktioniert jetzt auch bei gedrückter
+  Caps-Lock-Taste (allerdings nur mit amerikanischer Tastaturbelegung).
+- Beim Einlesen von Wortlisten mit einem Wort pro Zeile werden keine
+  Wortsequenzen mehr gespeichert, d.h. LetMeType schlägt nicht mehr
+  "Katalyse Katamaran" vor, nur weil diese Worte im eingelesenen Text
+  aufeinander folgen.
+
+Veröffentlicht: 22.11.1998
+
+
+1.5
+---
+
+- Kontextmenü für das Vorschlagsfenster
+- Feste, vom Benutzer wählbare Position für das Vorschlagsfenster (optional)
+- Registerkarten für die Dialogbox "Einstellungen"
+- Hyperlinks zur LetMeType-Hompage in verschiedenen Dialogboxen
+- Überarbeitete Programmhilfe
+
+- Verbesserter Algorithmus zur Berechnung der Wahrscheinlichkeit eines
+  Vorschlags.
+
+Veröffentlicht: 28.9.1998
+
+
+1.44
+----
+
+- Die Tastatureingabe wird auf vollkommen andere Art simuliert, so daß
+  es zu weniger Problemen mit anderen Programmen kommen sollte.
+  Außerdem können dadurch Sonderzeichen anderer Sprachen (Französisch,
+  Spanisch usw.) verarbeitet werden.
+
+- Durch einen Compiler-Fehler wurden auf bestimmten Rechnern die noch nicht
+  offiziell freigegebenen englischen Programmtexte angezeigt.
+
+Veröffentlicht: 27.8.1998
+
+
+1.43
+----
+
+- Der Wortschatz kann schreibgeschützt werden, so daß keine neuen
+  Worte hinzugefügt und keine alten Worte gelöscht werden.
+
+- Bei Eingabe von Daten in eine Excel-Tabelle wurde nach einem
+  Zellenwechsel das erste Zeichen verschluckt.
+
+Veröffentlicht: 9.2.1998
+
+
+1.42
+----
+
+- Informationen über den ausgewählten Menüpunkt in der Statuszeile
+
+- Die Dateiverschlüsselung funktioniert jetzt wirklich (siehe 1.32).
+
+Veröffentlicht: 12.1.1998
+
+
+1.41
+----
+
+- Verbesserte Reaktion auf Mausklicks und Cursortasten 
+
+- Bei Eingabe von Daten in eine MS-Works-Tabelle wurde das erste
+  Zeichen verschluckt.
+
+Veröffentlicht: 14.12.1997
+
+
+1.4
+----
+
+- Menüpunkt "Datei-Verknüpfen" zum Erstellen einer Verknüpfung mit
+  der gerade geladenen Datei im Startmenü.
+- Einlesen kompletter Dateien oder von Texten aus der Zwischenablage
+- Beschränkung des maximalen Wortalters und der Datenbankgröße, wenn
+  eine unregistrierte Kopie von LetMeType benutzt wird
+
+Veröffentlicht: 13.10.1997
+
+
+1.33
+----
+
+- Untermenü "Anzeige-Anordnen" zum Umsortieren der angezeigten Worte
+- Sortieren der angezeigten Worte nach ihrer Länge (hilfreich beim
+  Beheben von Tippfehlern)
+
+- Beim Speichern des Wortschatzes konnte es unter bestimmten Umständen
+  zum Absturz kommen.
+
+Veröffentlicht: 24.9.1997
+
+
+1.32
+----
+
+- Editieren von Worten in der Wortliste (so wie im
+  Explorer durch Klicken auf ein markiertes Wort)
+- Popupmenü für das kleine Icon in der Task-Leiste
+
+- Die Dateiverschlüsselung funktioniert jetzt.
+
+Veröffentlicht: 6.9.1997
+
+
+1.31
+----
+
+Behobene Fehler:
+
+- Seit Version 1.3 wurden Mausklicks ähnlich behandelt wie die Leertaste,
+  d.h. sie signalisieren den Anfang eines Wortes. Diese Version behebt
+  einen Fehler, der sich dabei eingeschlichen hatte.
+
+Veröffentlicht: 1.7.1997
+
+
+1.3
+---
+
+- Ändern der Text- und Hintergrundfarbe des Vorschlagsfensters
+- Neues Format der Wortschatzdatei (Verschlüsselung nur bei
+  Angabe eines Kennworts, Sapphire-Verfahren zur Verschlüsselung)
+
+- Wenn das "automatische Speichern" aktiviert ist, wird die Datei
+  jetzt tatsächlich alle 10 Minuten gespeichert. Bisher hatte das 
+  nur beim Beenden von LMT geklappt.
+
+Veröffentlicht: 19.6.1997
+
+
+1.2
+---
+
+- Liste aller bekannten Worte
+- Löschen von Worten
+- Die "minimale Wahrscheinlichkeit" in den Datei-Einstellungen 
+  bezieht sich nicht mehr auf alle angezeigten Vorschläge zusammen, 
+  sondern auf jeden einzelnen. Außerdem wurde die Art, wie die 
+  Wahrscheinlichkeit berechnet wird, geändert. Dadurch sind die 
+  Vorschläge wesentlich treffsicherer.
+- Optionales Einfügen eines Leerzeichens hinter jedem automatisch 
+  "getippten" Wort
+
+Veröffentlicht: 22.3.1997
+
+
+1.11
+----
+
+Behobene Fehler:
+
+- Beim Anzeigen des Vorschlagsfensters wurde auch das eigentliche 
+  Programmfenster angezeigt, wenn es nicht minimiert war.
+- Worte, die am Ende zwei gleiche Buchstaben haben, wurden nicht
+  richtig gespeichert.
+
+Veröffentlicht: 12.2.1997
+
+
+1.1
+---
+
+- Vorschläge können aus bis zu zwei Worten bestehen
+- Das Vorschlagsfenster wird jeweils auf die maximal notwendige 
+  Breite vergrößert bzw. verkleinert.
+- Wörter, in denen sich Buchstaben ungewöhnlich oft wiederholen,
+  werden nicht mehr gespeichert.
+- In Programmen, die die Position der Schreibmarke nicht mit den 
+  "offiziellen" Windows-Funktionen setzen, wird das 
+  Vorschlagsfenster jetzt in der Nähe des Mauszeigers angezeigt.
+
+- In der Statistik werden von LMT "getippte" Zeichen nicht mehr
+  als "Selbst getippt" gezählt.
+- In MS Exchange und evtl. weiteren Programmen wurden von LMT
+  "getippte" Worte bisher nicht korrekt erkannt und damit nicht 
+  gezählt.
+- Worte, die von LMT nicht korrekt "getippt" werden können, werden
+  nicht mehr vorgeschlagen. Das sind z.B. Worte, die großgeschriebene 
+  Umlaute enthalten.
+- Der Menüpunkt "Optionen"-"Registrieren..." wird beim Programmstart 
+  abgeschaltet, wenn das Programm registriert wurde.
+
+Veröffentlicht: 26.1.1997
+
+
+1.0
+---
+
+Erste veröffentlichte Version, 15.12.1996

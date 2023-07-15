@@ -1,0 +1,51 @@
+                            LetMeType 1.81
+
+                 Copyright (C) 2002 by Carsten Clasohm
+             
+
+Einführung
+==========
+
+LetMeType unterstützt Sie beim Eingeben von Texten. Es läuft im
+Hintergrund und und analysiert die von Ihnen getippten Texte. Nach
+einiger Zeit hat es genug Informationen gesammelt, um schon nach drei
+bis vier Buchstaben zu wissen, was Sie wahrscheinlich tippen wollen. 
+Eine Liste der möglichen Worte wird angezeigt, und Sie können mit
+einem einzigen Tastendruck den Rest des Wortes ergänzen lassen oder
+ganz normal weitertippen.
+
+LetMeType funktioniert unabhängig davon, in welchem Programm Sie den
+Text tippen. Word und Visual Studio werden ebenso unterstützt wie 
+Eingabefelder in Dialogboxen.
+
+
+Updates
+=======
+
+Die aktuelle Version des Programms finden Sie unter:
+
+  http://www.clasohm.com/lmt/de/
+
+
+Wenn Sie Fragen zur aktuellen oder Ideen für die nächste Version haben,
+erreichen Sie mich unter:
+
+  support@clasohm.com
+
+
+Lizenz
+======
+
+Dieses Programm ist freie Software. Sie können es unter den Bedingungen 
+der GNU General Public License, wie von der Free Software Foundation 
+veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß 
+Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren Version. 
+
+Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es
+Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne
+die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN 
+BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License. 
+
+Sie sollten eine Kopie der GNU General Public License zusammen mit diesem 
+Programm erhalten haben. Falls nicht, schreiben Sie an die Free Software 
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA. 
