@@ -1,0 +1,14 @@
+:Base LetMeType.hlp
+:Title LetMeType
+1 LetMeType
+2 Einführung=Introduction
+2 Vorschlagsfenster=Suggestions
+2 Menüs=Menus
+2 Einstellungen
+3 Allgemeines=Options
+3 Vorschläge und Wortschatz=IDH_FileOptions
+3 Zulässige Zeichen in Worten=AllowedChars
+3 Erkennen von Worten=WordRecognition
+3 Eingabe von Kennworten=Taboos
+1 Lizenz=Licence
+1 Updates=Updates
