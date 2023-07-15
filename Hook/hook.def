@@ -1,0 +1,8 @@
+LIBRARY lmthook
+
+DESCRIPTION 'LetMeType Hook DLL'
+VERSION 1.2
+
+EXPORTS
+    LMTGetMsgProc
+    LMTCallWndProc
