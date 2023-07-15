@@ -1,0 +1,280 @@
+		     LetMeType's Revision History
+
+1.81
+----
+
+- Instead of inserting the suggestions by simulating keyboard input, 
+  LetMeType now uses the clipboard. This makes inserting special
+  characters which are not available with the current keyboard layout
+  more reliable.
+
+- The task bar symbol is displayed permanently again. By clicking on
+  it, suggestions and the learning of new words can be toggled.
+
+Published: 9/5/2002
+
+
+1.8
+---
+
+- LetMeType uses a faster and more reliable way to simulate 
+  keyboard input.
+
+- Recognition of keyboard input is done in a new way, too.
+  This allows LetMeType to work with Borland Delphi.
+
+- Another change makes LetMeType work with MS Intelligent Forms,
+  which are used in Internet Explorer.
+
+- A list of applications can be defined to which LetMeType will
+  either limit itself, or which it will ignore. So you can 
+  activate it in your development environment, while keeping it
+  silent when typing emails.
+
+- Suggestions can be selected by clicking on them with the mouse.
+
+- During its automatic garbage collection, LetMeType will no longer
+  expedite the deletion of words which have only occured one or two 
+  times.
+
+- The task bar symbol is only shown when the main window is minimized.
+
+Published: 6/4/2002
+
+
+1.79
+----
+
+- Adding passwords that should be ignored works again.
+
+Published: 3/5/2002
+
+
+1.78
+----
+
+- LetMeType is no longer distributed as Shareware, but can be freely
+  copied according to the GNU General Public License, including the
+  source code. The limitations of the Shareware version have been
+  removed.
+
+- It is no longer possible to encrypt the vocabulary file. Before you
+  upgrade from an older version, you have to save your vocabulary
+  unencrypted.
+
+Published: 2/15/2002
+
+
+1.77
+----
+
+- Words that only have occured one or two times, are removed from the
+  vocabulary after 10 or 20 days respectively.
+- When making suggestions, LetMeType favors words that have been used 
+  recently.
+- No suggestions are made in hidden password fields, if they are to be 
+  ignored (File - Settings).
+- Closing the main window does no longer quit LetMeType, it only hides 
+  the window. The only way to exit LetMeType is by using menu item
+  "File - Exit".
+- If "Numeric Keypad" is deactivated in "File - Settings", suggestions
+  can only be selected using the normal digit keys. This way, the
+  numeric keypad can be used to enter numbers while LetMeType displays
+  its suggestion window.
+
+Published: 1/11/2000
+
+
+1.76
+----
+
+- Menu item "File - Merge" for adding words from a vocabulary file.
+
+- The state of "Settings - Monitor Clipboard" is permanently saved
+  again. In the previous version, the function always was activated
+  when LetMeType was started.
+- Words which LetMeType automatically pasted from the clipboard are not
+  saved if the vocabulary is set to "read-only".
+
+
+1.75
+----
+
+- The time after which the suggestion window is automatically hidden
+  can be adjusted.
+- You can move the suggestion window to change its distance from the
+  caret, and the window can be displayed next to the mouse pointer
+  instead of the caret. After moving the suggestion window, a dialog
+  will allow you to change these settings.
+
+- When Outlook Express 5 was used, LetMeType was unable to enter
+  certain characters, including umlauts. This was caused by OE5
+  processing a key which every Windows program should ignore.
+  LetMeType now avoids this incompatibility.
+
+Published: 10/10/1999
+
+1.74
+----
+
+- Numbers can be excluded from the vocabulary.
+
+- During startup, the window size set in a shortcut (e.g. Minimized) 
+  was not always honored.
+- After a word had been deleted or edited, the vocabulary was not
+  marked as modified, and therefore sometimes these changes were not
+  saved.
+
+Published: 8/14/1999
+
+
+1.73
+----
+
+LetMeType is now shipped with a setup program to make installation
+easier and provide uninstall support. No changes have been made to the
+application itself.
+
+Published: 7/21/1999
+
+
+1.72
+----
+
+- Suggestions and the learning of new words can be disabled separately.
+- LetMeType can quickly be deactivated and switched on again by
+  clicking on its tray icon. The icon is visible all the time,
+  and indicates the deactived state with a red cross.
+- "Words" may start with a digit.
+- Optionally, LetMeType learns words entered in hidden password fields.
+  (Previously, these fields were always ignored.)
+
+Published: 7/20/1999
+
+
+1.71
+----
+
+Fixed Bugs:
+
+- After clipboard monitoring had been deactivated, LetMeType would
+  crash the next time it was started.
+- If the path in which LetMeType.exe was located contained space
+  characters, the association between the application and its
+  documents was broken.
+
+Published: 6/16/1999
+
+
+1.7
+---
+
+- LetMeType now can automatically monitor the clipboard and add its
+  contents to the vocabulary.
+- Added a couple of Russian letters.
+
+- The window size specified in a shortcut to the executable or a document
+  (e.g. "minimized") was ignored so far.
+- Reading text from a file sometimes caused a crash under WinNT.
+- Made it harder to forge the registration key.
+
+Published: 6/11/1999
+
+
+1.64
+----
+
+- The suggestions can now be selected by using the numeric keypad instead of 
+  the normal digit keys.
+- Context menu for the word list.
+
+- Reading text from the clipboard did not always work correctly.
+
+Published: 3/27/1999
+
+
+1.63
+----
+
+- Under WinNT, LetMeType caused some applications to print an error message
+  when they were shut down.
+
+Published: 2/22/1999
+
+
+1.62
+----
+
+- Added a Russian letter to the "Word Characters" dialog.
+
+- Keyboard layouts where caps lock only shifts certain characters are
+  handled correctly.
+- The association between the application and its document files (*.lmt)
+  now works better. This allows one to open a new vocabulary in an
+  already running instance of LetMeType by double-clicking on the .lmt file
+  in Windows Explorer.
+- The tray icon sometimes mysteriously disappeared.
+
+Published: 2/17/1999
+
+
+1.61
+----
+
+- Automatic typing of characters like "\" did not work with WinNT.
+
+Published: 2/14/1999
+
+
+1.6
+---
+
+- The font of the suggestion window is user-selectable.
+
+- The automatic typing of characters that, like "á", require multiple 
+  keystrokes, now works.
+
+Published: 1/18/1999
+
+
+1.53
+----
+
+- If you activate the "Read-only" setting, newly typed words will now be
+  memorized by LetMeType, but not stored on disk. I.e. the words can be used
+  as long as LetMeType runs, but will be discarded when the program exits.
+  Words added using "File - Import Text" will always be stored permanently.
+
+Published: 12/12/1998
+
+
+1.52
+----
+
+- LetMeType does not store new words typed in password fields. 
+  (This only works for the built-in Windows password field, which displays
+   entered characters as asterisks.)
+
+Published: 11/29/1998
+
+
+1.51
+----
+
+- By default, LetMeType ignores a word's capitalization when computing
+  the suggestions.
+- The size and age limits for the vocabulary have been raised.
+
+- Selecting a suggestion while caps lock is activated now works.
+- When importing a word list with one word per line, LetMeType no longer
+  stores word sequences. Therefore you will not see a suggestion like
+  "dragoon dragster" just because the words appeared next to each other
+  in the imported dictionary.
+
+Published: 11/22/1998
+
+
+1.5
+---
+
+The first published English version, 10/9/1998
