@@ -1,0 +1,1525 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\AutoType.ico"
+IDI_DEACTIVATED         ICON    DISCARDABLE     "res\\deactivated.ico"
+IDI_NO_SUGGEST          ICON    DISCARDABLE     "res\\no_suggest.ico"
+IDI_WINDOW_CROSSHAIR    ICON    DISCARDABLE     "res\\window_crosshair.ico"
+IDI_WINDOW              ICON    DISCARDABLE     "res\\window.ico"
+IDI_NO_LEARN            ICON    DISCARDABLE     "res\\no_learn.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  DISCARDABLE     "res\\toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_APP_EXIT,            VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_F5,          ID_VIEW_REFRESH,        VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SUGGEST_WORDS DIALOGEX 0, 0, 351, 110
+STYLE DS_ABSALIGN | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "LetMeType:"
+FONT 9, "Arial", 0, 0, 0x1
+BEGIN
+    LTEXT           "1",IDC_WORD1,2,2,348,10,SS_NOTIFY
+    LTEXT           "2",IDC_WORD2,2,14,348,10,SS_NOTIFY
+    LTEXT           "3",IDC_WORD3,2,26,348,10,SS_NOTIFY
+    LTEXT           "4",IDC_WORD4,2,38,348,10,SS_NOTIFY
+    LTEXT           "5",IDC_WORD5,2,50,348,10,SS_NOTIFY
+    LTEXT           "6",IDC_WORD6,2,62,348,10,SS_NOTIFY
+    LTEXT           "7",IDC_WORD7,2,74,348,10,SS_NOTIFY
+    LTEXT           "8",IDC_WORD8,2,86,348,10,SS_NOTIFY
+    LTEXT           "9",IDC_WORD9,2,98,348,10,SS_NOTIFY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_DELETE
+    SEPARATOR
+    BUTTON      ID_VIEW_LIST
+    BUTTON      ID_VIEW_DETAILS
+    SEPARATOR
+    BUTTON      ID_HELP_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_MYHAND              CURSOR  DISCARDABLE     "res\\cursor.cur"
+IDC_CROSSHAIR           CURSOR  DISCARDABLE     "res\\crosshair.cur"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Deutsch (Deutschland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 226, 103
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Über LetMeType"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,11,21,20
+    LTEXT           "LetMeType",IDC_VERSION,40,4,119,8
+    LTEXT           "Copyright © 2002  Carsten Clasohm",IDC_STATIC,40,17,119,
+                    8
+    DEFPUSHBUTTON   "OK",IDOK,169,6,50,14,WS_GROUP
+    RTEXT           "Selbst getippt:",IDC_STATIC,12,55,50,10
+    RTEXT           "Tippen lassen:",IDC_STATIC,12,66,50,10
+    GROUPBOX        "Statistik",IDC_STATIC,9,43,210,50
+    LTEXT           "0",IDC_wmCharCount,67,55,55,10
+    LTEXT           "0",IDC_autoTypeCount,67,66,55,10
+    RTEXT           "Datenbank:",IDC_STATIC,129,55,40,10
+    LTEXT           "0",IDC_DBSIZE,174,55,40,10
+    RTEXT           "Ø Auftreten:",IDC_STATIC,129,66,40,10
+    LTEXT           "0",IDC_ACCESSES,174,66,40,10
+    RTEXT           "Ø Alter:",IDC_STATIC,129,77,40,10
+    LTEXT           "0",IDC_AGE,174,77,40,10
+    LTEXT           "(0%)",IDC_RELAUTO,67,77,30,10
+    PUSHBUTTON      "&Getippt = 0",IDC_RESET,169,25,50,14
+    LTEXT           "Oops!",IDC_URL,40,30,119,8
+END
+
+IDD_PASSWORDS DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Zu ignorierende Worte"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Abbrechen",IDCANCEL,125,73,50,14
+    LISTBOX         IDC_PWLIST,6,14,107,73,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Beschreibung:",IDC_STATIC,6,3,49,8
+    PUSHBUTTON      "&Neu...",IDC_NEW,125,14,49,14
+    PUSHBUTTON      "Entfernen",IDC_REMOVE,125,31,49,14,WS_DISABLED
+    DEFPUSHBUTTON   "OK",IDOK,125,56,50,14
+END
+
+IDD_WORDCHARS DIALOG DISCARDABLE  0, 0, 129, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "In Worten zulässige Zeichen"
+FONT 10, "MS Sans Serif"
+BEGIN
+    CONTROL         "0123456789",IDC_DIGITS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,4,44,9
+    CONTROL         "( ) { } [ ] <>",IDC_BRACKETS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,14,40,10
+    CONTROL         " _",IDC_CHAR1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,
+                    24,14,10
+    CONTROL         " -",IDC_CHAR2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,
+                    34,14,10
+    CONTROL         " '",IDC_CHAR3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,
+                    44,14,10
+    CONTROL         " .",IDC_CHAR4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,
+                    54,14,10
+    CONTROL         " :",IDC_CHAR5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    4,14,10
+    CONTROL         " /",IDC_CHAR6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    14,14,10
+    CONTROL         " \\",IDC_CHAR7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    24,14,10
+    CONTROL         " &&",IDC_CHAR8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    34,14,10
+    CONTROL         " #",IDC_CHAR9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    44,14,10
+    CONTROL         " $",IDC_CHAR10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    54,19,10
+    CONTROL         " %",IDC_CHAR11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    4,19,10
+    CONTROL         " @",IDC_CHAR12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    14,19,10
+    CONTROL         " *",IDC_CHAR13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    24,19,10
+    CONTROL         " +",IDC_CHAR14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    34,19,10
+    CONTROL         " =",IDC_CHAR15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    44,19,10
+    CONTROL         " ^",IDC_CHAR16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    54,19,10
+    CONTROL         " |",IDC_CHAR17,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    108,4,19,10
+    CONTROL         " ~",IDC_CHAR18,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    108,14,19,10
+    CONTROL         " ×",IDC_CHAR19,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    108,24,19,10
+    CONTROL         " ÷",IDC_CHAR20,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    108,34,19,10
+    DEFPUSHBUTTON   "OK",IDOK,10,69,46,12
+    PUSHBUTTON      "Abbrechen",IDCANCEL,73,69,46,12
+END
+
+IDD_PROP_SUGGESTIONS DIALOG DISCARDABLE  0, 0, 213, 185
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Vorschläge"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Vorschläge",IDC_STATIC,6,7,200,171
+    LTEXT           "&Zeichen:",IDC_STATIC,11,21,29,8
+    EDITTEXT        IDC_GIVEN,45,19,25,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_GIVEN_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,61,19,7,
+                    12
+    LTEXT           "gegeben,",IDC_STATIC,73,21,31,8
+    EDITTEXT        IDC_ADDED,109,19,25,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_ADDED_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,127,19,7,
+                    12
+    LTEXT           "hinzugefügt",IDC_STATIC,137,21,38,8
+    LTEXT           "&Vorschläge: höchstens",IDC_STATIC,11,40,76,9
+    EDITTEXT        IDC_MAXSUGGESTED,89,38,25,12
+    CONTROL         "Spin1",IDC_MAXSUGGESTED_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,104,37,7,12
+    LTEXT           "&Wahrscheinlichkeit:",IDC_STATIC,11,59,63,8
+    EDITTEXT        IDC_PROBABILITY,78,57,23,12,ES_AUTOHSCROLL
+    LTEXT           "%",IDC_STATIC,104,59,8,8
+    LTEXT           "&Tippgeschwindigkeit:",IDC_STATIC,11,78,68,8
+    EDITTEXT        IDC_SPEED,84,76,23,12,ES_AUTOHSCROLL
+    LTEXT           "ms pro Anschlag",IDC_STATIC,110,78,53,8
+    LTEXT           "Automatisch verstecken nach",IDC_STATIC,11,97,95,8
+    EDITTEXT        IDC_TIMEOUT,111,95,29,12,ES_AUTOHSCROLL
+    LTEXT           "ms",IDC_STATIC,143,97,10,8
+    CONTROL         "",IDC_AUTOHIDE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    158,97,9,9
+    LTEXT           "Position:",IDC_STATIC,11,116,28,8
+    COMBOBOX        IDC_POSITION,43,113,60,54,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "&Nur einzelne Worte",IDC_SINGLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,132,76,10
+    CONTROL         "Ziffern&block",IDC_NUMPAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,147,53,10
+    CONTROL         "&Großschreibung",IDC_CASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,162,66,10
+    CONTROL         "&Leerzeichen anhängen",IDC_SPACE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,108,132,89,10
+    CONTROL         "A&kkustisches Signal",IDC_SIGNAL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,108,147,76,10
+END
+
+IDD_PROP_DB DIALOG DISCARDABLE  0, 0, 213, 133
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Wortschatz"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Alter:",IDC_STATIC,12,24,26,9
+    CONTROL         "Slider1",IDC_AGE_SLIDER,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,41,19,155,18
+    EDITTEXT        IDC_AGE,85,37,23,12,ES_AUTOHSCROLL
+    LTEXT           "Tage",IDC_STATIC,111,39,17,9
+    LTEXT           "G&röße:",IDC_STATIC,12,57,26,9
+    CONTROL         "Slider1",IDC_SIZE_SLIDER,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,41,52,155,18
+    EDITTEXT        IDC_DBSIZE,78,70,30,12,ES_AUTOHSCROLL
+    LTEXT           "KByte",IDC_STATIC,111,72,20,9
+    CONTROL         "Automatisch &speichern",IDC_AUTOSAVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,94,86,10
+    CONTROL         "Schreib&geschützt",IDC_READONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,108,94,86,10
+    GROUPBOX        "Wortschatz",IDC_STATIC,6,7,200,119
+    CONTROL         "&Paßwortfelder ignorieren",IDC_IGNORE_PASSWORDS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,109,91,10
+    CONTROL         "&Zahlen",IDC_ALLOW_NUMBERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,108,109,86,10
+END
+
+IDD_FONT DIALOG DISCARDABLE  13, 54, 192, 213
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Schriftart"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Schriftart:",1088,7,7,40,9
+    COMBOBOX        1136,7,16,132,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        1137,7,194,16,12,CBS_SIMPLE | CBS_DISABLENOSCROLL | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Grad:",1090,150,7,30,9
+    COMBOBOX        1138,150,16,32,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_SORT | CBS_HASSTRINGS | CBS_DISABLENOSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,46,192,45,14,WS_GROUP
+    PUSHBUTTON      "Abbrechen",IDCANCEL,101,192,45,14,WS_GROUP
+    LTEXT           "&Farbe:",1091,7,157,30,9
+    COMBOBOX        1139,7,168,83,100,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Muster",1073,7,97,175,53,WS_GROUP
+    CTEXT           "AaBbYyZz",1092,14,111,162,33,SS_NOPREFIX | NOT 
+                    WS_VISIBLE
+    LTEXT           "S&chrift:",1094,99,158,30,9
+    COMBOBOX        1140,99,168,83,53,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_POSITION DIALOG DISCARDABLE  0, 0, 161, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Position des Vorschlagsfensters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Sie haben das Vorschlagsfenster verschoben.\nWo soll es in Zukunft angezeigt werden?",
+                    IDC_STATIC,7,7,147,18
+    CONTROL         "Neben der Schreibmarke.",IDC_CARET,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,31,97,10
+    CONTROL         "Immer an der gleichen Stelle.",IDC_FIXED,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,7,43,107,10
+    CONTROL         "Neben dem Mauszeiger.",IDC_CURSOR,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,7,55,93,10
+    DEFPUSHBUTTON   "OK",IDOK,24,74,50,14,WS_GROUP
+    PUSHBUTTON      "Abbrechen",IDCANCEL,87,74,50,14
+END
+
+IDD_NEWPASSWORD DIALOG DISCARDABLE  0, 0, 151, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Neues Wort eingeben"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Wort:",IDC_STATIC,7,6,47,7
+    RTEXT           "Beschreibung:",IDC_STATIC,7,26,47,9
+    DEFPUSHBUTTON   "OK",IDOK,14,48,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,86,48,50,14
+    EDITTEXT        IDC_WORD,58,4,85,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DESCRIPTION,58,24,85,12,ES_AUTOHSCROLL
+END
+
+IDD_APPLICATIONS DIALOG DISCARDABLE  0, 0, 270, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Anwendungen auswählen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Abbrechen",IDCANCEL,212,106,50,14
+    LISTBOX         IDC_APPL_LIST,6,47,195,73,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Neu...",IDC_NEW,212,47,49,14
+    PUSHBUTTON      "&Entfernen",IDC_REMOVE,212,64,49,14,WS_DISABLED
+    DEFPUSHBUTTON   "OK",IDOK,212,89,50,14
+    CONTROL         "Nur &diese Anwendungen:",IDC_POSITIVE,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY,6,18,96,10
+    CONTROL         "A&lle ausser diesen Anwendungen:",IDC_NEGATIVE,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY,6,30,123,10
+    CONTROL         "&Alle Anwendungen unterstützen.",IDC_ALL,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY,6,6,118,10
+END
+
+IDD_NEWAPPLICATION DIALOG DISCARDABLE  0, 0, 270, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Anwendung hinzufügen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,76,83,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,142,83,50,14
+    LTEXT           "Ziehen Sie das Fadenkreuz über das Fenster der Anwendung, oder suchen Sie nach der Datei, mit der die Anwendung gestartet wird.",
+                    IDC_STATIC,6,7,258,21
+    EDITTEXT        IDC_FILENAME,6,60,235,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,247,60,18,14,BS_NOTIFY
+    ICON            IDI_WINDOW_CROSSHAIR,IDC_WINDOW,114,31,20,20,SS_NOTIFY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 9
+        RIGHTMARGIN, 219
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_PROP_SUGGESTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_PROP_DB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 126
+    END
+
+    IDD_FONT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_POSITION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 154
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,8,1,1
+ PRODUCTVERSION 1,8,1,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Carsten Clasohm\0"
+            VALUE "FileDescription", "LetMeType - Keyboard Utility\0"
+            VALUE "FileVersion", "1.81\0"
+            VALUE "InternalName", "LetMeType\0"
+            VALUE "LegalCopyright", "Copyright © 2002  Carsten Clasohm\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "LetMeType.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "LetMeType Deutsch\0"
+            VALUE "ProductVersion", "1.81\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""res\\AutoType.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#if defined(AFX_TARG_DEU)\r\n"
+    "#include ""l.deu\\afxres.rc""\r\n"
+    "#else\r\n"
+    "#include ""afxres.rc""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "&Neu\tStrg+N",                ID_FILE_NEW
+        MENUITEM "Ö&ffnen...\tStrg+O",          ID_FILE_OPEN
+        MENUITEM "&Speichern\tStrg+S",          ID_FILE_SAVE
+        MENUITEM "Speichern &unter...",         ID_FILE_SAVE_AS
+        MENUITEM "&Importieren...",             ID_FILE_MERGE
+        MENUITEM "&Verknüpfen...",              ID_FILE_SHORTCUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Einstellungen...",           ID_FILE_SETTINGS
+        MENUITEM "&Zulässige Zeichen...",       ID_FILE_CHARS
+        MENUITEM "&Text lesen...",              ID_FILE_READ
+        MENUITEM SEPARATOR
+        MENUITEM "Letzte Datei",                ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Beenden\tStrg+Q",            ID_APP_EXIT
+    END
+    POPUP "&Bearbeiten"
+    BEGIN
+        MENUITEM "&Zwischenablage lesen\tStrg+V", ID_EDIT_PASTE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Bearbeiten",                 ID_EDIT_EDIT
+        MENUITEM "&Löschen",                    ID_EDIT_DELETE
+    END
+    POPUP "&Optionen"
+    BEGIN
+        MENUITEM "&Vorschläge",                 ID_OPTIONS_SUGGEST, CHECKED
+        MENUITEM "&Worte lernen",               ID_OPTIONS_LEARN, CHECKED
+        MENUITEM "&Zwischenablage lesen",       ID_OPTIONS_CLIPBOARD
+        , CHECKED
+        MENUITEM "&Tasten zählen",              ID_OPTIONS_COUNTKEYS
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "&Kennwörter ausschließen...", ID_OPTIONS_PASSWORDS
+        MENUITEM "&Anwendungen auswählen...",   ID_OPTIONS_APPLICATIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Hintergrundfarbe...",        ID_OPTIONS_BACKCOLOR
+        MENUITEM "&Schriftart...",              ID_OPTIONS_FONT
+    END
+    POPUP "&Ansicht"
+    BEGIN
+        MENUITEM "&Symbolleiste",               ID_VIEW_TOOLBAR
+        MENUITEM "S&tatusleiste",               ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Liste",                      ID_VIEW_LIST
+        MENUITEM "&Details",                    ID_VIEW_DETAILS
+        POPUP "A&nordnen"
+        BEGIN
+            MENUITEM "&Alphabetisch",               ID_VIEW_SORT_ALPHA
+            MENUITEM "Nach &Häufigkeit",            ID_VIEW_SORT_OCCURENCES
+            MENUITEM "Nach Al&ter",                 ID_VIEW_SORT_AGE
+            MENUITEM "Nach &Länge",                 ID_VIEW_SORT_LENGTH
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Aktualisieren\tF5",          ID_VIEW_REFRESH
+    END
+    POPUP "&Hilfe"
+    BEGIN
+        MENUITEM "&Inhalt",                     ID_HELP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "Inf&o...",                    ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP_TRAY MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Vorschläge",                  ID_OPTIONS_SUGGEST, CHECKED
+        MENUITEM "Worte lernen",                ID_OPTIONS_LEARN, CHECKED
+        MENUITEM "Einstellungen...",            ID_FILE_SETTINGS
+        MENUITEM "Hilfe...",                    ID_HELP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "Wiederherstellen",            ID_APP_RESTORE
+        MENUITEM "Beenden",                     ID_APP_EXIT
+    END
+END
+
+IDR_SUGGESTIONS MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Vorschläge",                 ID_OPTIONS_SUGGEST
+        MENUITEM "Worte lernen",                ID_OPTIONS_LEARN
+        MENUITEM "&Einstellungen...",           ID_FILE_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "&Schreibmarke",               ID_POS_CARET
+        MENUITEM "&Feste Position",             ID_POS_FIXED
+        MENUITEM "&Mauszeiger",                 ID_POS_CURSOR
+    END
+END
+
+IDR_POPUP_LIST MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Bearbeiten",                 ID_EDIT_EDIT
+        MENUITEM "&Löschen",                    ID_EDIT_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROP_SUGGESTIONS DLGINIT
+BEGIN
+    IDC_POSITION, 0x403, 13, 0
+0x6353, 0x7268, 0x6965, 0x6d62, 0x7261, 0x656b, "\000" 
+    IDC_POSITION, 0x403, 15, 0
+0x6546, 0x7473, 0x2065, 0x6f50, 0x6973, 0x6974, 0x6e6f, "\000" 
+    IDC_POSITION, 0x403, 11, 0
+0x614d, 0x7375, 0x657a, 0x6769, 0x7265, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "LetMeType\n\nWortschatz\nWortschatz (*.lmt)\n.lmt\nLetMeTypeVocabulary\nLetMeType Wortschatz"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "LetMeType"
+    AFX_IDS_IDLEMESSAGE     "Bereit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "ER"
+    ID_INDICATOR_CAPS       "UF"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "RF"
+    ID_INDICATOR_OVR        "ÜB"
+    ID_INDICATOR_REC        "MA"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Erstellt einen neuen Wortschatz.\nNeuer Wortschatz"
+    ID_FILE_OPEN            "Öffnet einen bestehenden Wortschatz.\nWortschatz öffnen"
+    ID_FILE_CLOSE           "Schließt den aktuellen Wortschatz.\nWortschatz schließen"
+    ID_FILE_SAVE            "Speichert den aktuellen Wortschatz.\nWortschatz speichern"
+    ID_FILE_SAVE_AS         "Speichert den Wortschatz unter neuem Namen.\nSpeichern unter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Zeigt Informationen und Copyright zu LetMeType an.\nInfo"
+    ID_APP_EXIT             "Beendet LetMeType.\nBeenden"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Öffnet diesen Wortschatz."
+    ID_FILE_MRU_FILE2       "Öffnet diesen Wortschatz."
+    ID_FILE_MRU_FILE3       "Öffnet diesen Wortschatz."
+    ID_FILE_MRU_FILE4       "Öffnet diesen Wortschatz."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Blendet die Symbolleiste ein oder aus.\nSymbolleiste ein-/ausschalten"
+    ID_VIEW_STATUS_BAR      "Blendet die Statusleiste ein oder aus.\nStatusleiste ein-/ausschalten"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Ändert die Fenstergröße."
+    AFX_IDS_SCMOVE          "Ändert die Position des Fensters."
+    AFX_IDS_SCMINIMIZE      "Verkleinert das Fenster zu einem Symbol."
+    AFX_IDS_SCMAXIMIZE      "Vergrößert das Fenster zu voller Größe."
+    AFX_IDS_SCCLOSE         "Schließt das Fenster und fragt, ob der Wortschatz gespeichert werden soll."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Stellt das Fenster in seiner normalen Größe wieder her."
+    IDS_CHARACTERS          "Zeichen"
+    IDS_WORDS               "Worte"
+    IDS_DAYS                "Tage"
+    IDS_TIMES               "mal"
+    IDS_PWERRMSG            "Das Wort kann nicht gespeichert werden,\nda unter der Beschreibung\n""%s""\nbereits das gleiche oder ein ähnliches existiert."
+    IDS_PWERRTITLE          "Fehler beim Einfügen"
+    IDS_ILLCHAR             "Unzulässiges Zeichen: '%c'\nDas eingegebene Wort darf nur Buchstaben, Ziffern und einige andere Zeichen enthalten."
+    IDS_DLLERR              "LMTHOOK.DLL kann nicht geladen werden."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS_ACTIVATED    "(De)aktiviert die Überwachung der Tastatur.\n(De)aktivieren"
+    ID_FILE_SETTINGS        "Ändert die Einstellungen für den Wortschatz.\nEinstellungen ändern"
+    ID_OPTIONS_PASSWORDS    "Legt zu ignorierende Wörter fest.\nKennwörter ändern"
+    ID_FILE_CHARS           "Legt die in Worten zulässigen Zeichen fest.\nZulässige Zeichen"
+    ID_HELP_HELP            "Online-Dokumentation von LetMeType\nHilfe"
+    ID_OPTIONS_COUNTKEYS    "Tastenanschläge zählen.\nTasten zählen"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_LIST            "Zeigt die Worte in Listenform an.\nListe"
+    ID_VIEW_DETAILS         "Zeigt die Worte mit zusätzlichen Informationen an.\nDetails"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DECYPHER_ERROR      "Diese Version von LetMeType kann nur unverschlüsselte Dateien lesen.\nBitte benutzen Sie LetMeType 1.77, um die Datei unverschlüsselt zu speichern."
+    IDS_SPY_HOOK_NOT_SET    "LMTHOOK.DLL kann nicht installiert werden."
+    IDS_WORD                "Wort"
+    IDS_OCCURENCES          "Häufigkeit"
+    IDS_AGE                 "Alter"
+    IDS_FORECOLOR           "Textfarbe"
+    IDS_BACKCOLOR           "Hintergrundfarbe"
+    IDS_TOOLONG             "Das eingebene Wort ist zu lang (>%d Zeichen)."
+    IDS_DUPE                "Das eingebene Wort ist bereits in der Datenbank vorhanden."
+    IDS_SHORTCUT_FILTERS    "Verknüpfung (.lnk)|*.lnk|Alle Dateien (*.*)|*.*||"
+    IDS_TEXT_FILTERS        "Text (.txt)|*.txt|Alle Dateien (*.*)|*.*||"
+    IDS_EXE_FILTERS         "Ausführbare Dateien (.exe;.dll;.ocx)|*.exe;*.dll;*.ocx|Alle Dateien (*.*)|*.*||"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_REFRESH         "Aktualisiert die angezeigte Wortliste.\nAktualisieren"
+    ID_EDIT_DELETE          "Löscht das markierte Wort.\nLöschen"
+    ID_EDIT_EDIT            "Bearbeitet das ausgewählte Wort.\nBearbeiten"
+    ID_VIEW_SORT_ALPHA      "Sortiert die angezeigten Worte alphabetisch.\nAlphabetisch"
+    ID_VIEW_SORT_OCCURENCES "Sortiert die angezeigten Worte nach ihrer Häufigkeit.\nWorthäufigkeit"
+    ID_VIEW_SORT_AGE        "Sortiert die angezeigten Worte nach ihrem Alter.\nWortalter"
+    ID_VIEW_SORT_LENGTH     "Sortiert die angezeigten Worte nach ihrer Länge.\nWortlänge"
+    ID_FILE_SHORTCUT        "Erstellt eine Verknüpfung für den Wortschatz.\nVerknüpfung"
+    ID_FILE_READ            "Fügt Worte aus einer Datei zum Wortschatz hinzu.\nImportieren"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_PASTE           "Liest Worte aus der Zwischenablage.\nEinfügen"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS_BACKCOLOR    "Ändert die Hintergrundfarbe des Vorschlagsfensters.\nHintergrundfarbe"
+    ID_OPTIONS_TEXTCOLOR    "Ändert die Textfarbe des Vorschlagsfensters.\nTextfarbe"
+    ID_FILE_FIXEDPOS        "Feste Position für das Vorschlagsfenster\nFeste Position"
+    ID_OPTIONS_FONT         "Ändert den Zeichensatz des Vorschlagsfensters.\nZeichensatz"
+    ID_OPTIONS_CLIPBOARD    "Worte aus der Zwischenablage automatisch lesen.\nZwischenablage"
+    ID_APP_RESTORE          "Zeigt das Fenster in normaler Größe an\nWiederherstellen"
+    ID_OPTIONS_SUGGEST      "Vorschläge machen.\nVorschläge"
+    ID_OPTIONS_LEARN        "Neue Worte lernen.\nLernen"
+    ID_FILE_MERGE           "Fügt die Worte aus einem anderen Wortschatz hinzu.\nImportieren"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SETTINGS            "Einstellungen"
+    IDS_URL                 "http://www.clasohm.com/lmt/de/"
+    IDS_LANGUAGE            "de"
+    IDS_NO_LEARN            "keine Worte lernen"
+    IDS_OPENDOC_ERROR       "Beim Öffnen des Dokuments ""%s"" ist ein Fehler aufgetreten."
+    IDS_READ_ERROR          "Fehler beim Lesen der Datei."
+    IDS_VERSION_ERROR       "Die Datei wurde mit einer neueren Version von LetMeType erstellt und kann deshalb nicht gelesen werden."
+    IDS_VOCABULARY_FILTERS  "Wortschatz (*.lmt)|*.lmt|Alle Dateien (*.*)|*.*||"
+    IDS_NO_SUGGEST          "keine Vorschläge"
+    IDS_DEACTIVATED         "abgeschaltet"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS_APPLICATIONS "Schränkt LetMeType auf die angegebenen Anwendungen ein.\nAnwendungen festlegen"
+END
+
+#endif    // Deutsch (Deutschland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Englisch (USA) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 245, 102
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About LetMeType"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,11,21,20
+    LTEXT           "LetMeType",IDC_VERSION,40,4,119,8
+    LTEXT           "Copyright © 2002  Carsten Clasohm",IDC_STATIC,40,17,119,
+                    8
+    DEFPUSHBUTTON   "OK",IDOK,188,4,50,14,WS_GROUP
+    RTEXT           "You:",IDC_STATIC,12,55,50,10
+    RTEXT           "LetMeType:",IDC_STATIC,12,69,50,10
+    GROUPBOX        "Statistics",IDC_STATIC,9,42,229,50
+    LTEXT           "0",IDC_wmCharCount,67,55,64,10
+    LTEXT           "0",IDC_autoTypeCount,67,69,63,10
+    RTEXT           "Vocabulary:",IDC_STATIC,145,55,40,10
+    LTEXT           "0",IDC_DBSIZE,189,55,40,10
+    RTEXT           "Ø Occurences:",IDC_STATIC,131,66,53,10
+    LTEXT           "0",IDC_ACCESSES,189,66,40,10
+    RTEXT           "Ø Age:",IDC_STATIC,158,77,27,10
+    LTEXT           "0",IDC_AGE,189,77,40,10
+    LTEXT           "(0%)",IDC_RELAUTO,67,78,30,10
+    PUSHBUTTON      "&Typed = 0",IDC_RESET,188,23,50,14
+    LTEXT           "Oops!",IDC_URL,40,30,119,8
+END
+
+IDD_WORDCHARS DIALOG DISCARDABLE  0, 0, 129, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Word Characters"
+FONT 10, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,10,69,46,12
+    PUSHBUTTON      "Cancel",IDCANCEL,73,69,46,12
+    CONTROL         "0123456789",IDC_DIGITS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,4,44,9
+    CONTROL         "( ) { } [ ] <>",IDC_BRACKETS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,14,40,10
+    CONTROL         " _",IDC_CHAR1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,
+                    24,14,10
+    CONTROL         " -",IDC_CHAR2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,
+                    34,14,10
+    CONTROL         " '",IDC_CHAR3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,
+                    44,14,10
+    CONTROL         " .",IDC_CHAR4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,
+                    54,14,10
+    CONTROL         " :",IDC_CHAR5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    4,14,10
+    CONTROL         " /",IDC_CHAR6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    14,14,10
+    CONTROL         " \\",IDC_CHAR7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    24,14,10
+    CONTROL         " &&",IDC_CHAR8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    34,14,10
+    CONTROL         " #",IDC_CHAR9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    44,14,10
+    CONTROL         " $",IDC_CHAR10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,
+                    54,19,10
+    CONTROL         " %",IDC_CHAR11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    4,19,10
+    CONTROL         " @",IDC_CHAR12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    14,19,10
+    CONTROL         " *",IDC_CHAR13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    24,19,10
+    CONTROL         " +",IDC_CHAR14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    34,19,10
+    CONTROL         " =",IDC_CHAR15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    44,19,10
+    CONTROL         " ^",IDC_CHAR16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    54,19,10
+    CONTROL         " |",IDC_CHAR17,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    108,4,19,10
+    CONTROL         " ~",IDC_CHAR18,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    108,14,19,10
+    CONTROL         " ×",IDC_CHAR19,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    108,24,19,10
+    CONTROL         " ÷",IDC_CHAR20,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    108,34,19,10
+END
+
+IDD_PASSWORDS DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Ignored Words"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,125,73,50,14
+    LISTBOX         IDC_PWLIST,6,14,107,73,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Description:",IDC_STATIC,6,3,49,8
+    PUSHBUTTON      "&Add...",IDC_NEW,125,14,49,14
+    PUSHBUTTON      "Remove",IDC_REMOVE,125,31,49,14,WS_DISABLED
+    DEFPUSHBUTTON   "OK",IDOK,125,56,50,14
+END
+
+IDD_PROP_DB DIALOG DISCARDABLE  0, 0, 213, 132
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Vocabulary"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Age:",IDC_STATIC,12,24,19,9
+    CONTROL         "Slider1",IDC_AGE_SLIDER,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,34,19,160,18
+    EDITTEXT        IDC_AGE,85,37,23,12,ES_AUTOHSCROLL
+    LTEXT           "days",IDC_STATIC,111,39,17,9
+    LTEXT           "&Size:",IDC_STATIC,12,57,19,9
+    CONTROL         "Slider1",IDC_SIZE_SLIDER,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,34,52,160,18
+    EDITTEXT        IDC_DBSIZE,78,70,30,12,ES_AUTOHSCROLL
+    LTEXT           "KByte",IDC_STATIC,111,72,20,9
+    CONTROL         "Save &automatically",IDC_AUTOSAVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,94,86,10
+    CONTROL         "&Read-only",IDC_READONLY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,108,94,86,10
+    GROUPBOX        "Vocabulary (maximum values)",IDC_STATIC,6,7,200,118
+    CONTROL         "Ignore &password fields",IDC_IGNORE_PASSWORDS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,109,91,10
+    CONTROL         "&Numbers",IDC_ALLOW_NUMBERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,108,109,86,10
+END
+
+IDD_PROP_SUGGESTIONS DIALOG DISCARDABLE  0, 0, 213, 185
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Suggestions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Suggestions",IDC_STATIC,6,7,200,171
+    LTEXT           "Characters:",IDC_STATIC,11,21,37,8
+    EDITTEXT        IDC_GIVEN,52,19,25,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_GIVEN_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,75,19,7,
+                    12
+    LTEXT           "given, ",IDC_STATIC,80,21,22,8
+    EDITTEXT        IDC_ADDED,104,19,25,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_ADDED_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,122,19,7,
+                    12
+    RTEXT           "added",IDC_STATIC,131,21,21,8
+    LTEXT           "&Suggestions: at most",IDC_STATIC,11,40,66,8
+    EDITTEXT        IDC_MAXSUGGESTED,82,38,25,12
+    CONTROL         "Spin1",IDC_MAXSUGGESTED_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,97,39,7,12
+    LTEXT           "&Probability:",IDC_STATIC,11,59,35,8
+    EDITTEXT        IDC_PROBABILITY,51,57,23,12,ES_AUTOHSCROLL
+    LTEXT           "%",IDC_STATIC,77,59,10,9
+    LTEXT           "&Typing speed:",IDC_STATIC,11,78,46,8
+    EDITTEXT        IDC_SPEED,62,76,23,12,ES_AUTOHSCROLL
+    LTEXT           "ms per key",IDC_STATIC,88,78,39,9
+    LTEXT           "Automatically hide after",IDC_STATIC,11,97,74,8
+    EDITTEXT        IDC_TIMEOUT,90,95,29,12,ES_AUTOHSCROLL
+    LTEXT           "ms",IDC_STATIC,122,97,10,8
+    CONTROL         "",IDC_AUTOHIDE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    137,97,9,9
+    CONTROL         "Single &words only",IDC_SINGLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,132,76,10
+    CONTROL         "&Numeric Keypad",IDC_NUMPAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,147,68,10
+    CONTROL         "A&ppend space",IDC_SPACE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,108,132,62,10
+    CONTROL         "&Capitalization",IDC_CASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,162,57,10
+    CONTROL         "S&ound",IDC_SIGNAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,108,147,76,10
+    LTEXT           "Position:",IDC_STATIC,11,116,28,8
+    COMBOBOX        IDC_POSITION,43,113,40,54,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_FONT DIALOG DISCARDABLE  13, 54, 192, 213
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Font"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Font:",1088,7,7,40,9
+    COMBOBOX        1136,7,16,132,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        1137,7,194,16,12,CBS_SIMPLE | CBS_DISABLENOSCROLL | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Size:",1090,150,7,30,9
+    COMBOBOX        1138,150,16,32,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_SORT | CBS_HASSTRINGS | CBS_DISABLENOSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,46,192,45,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,101,192,45,14,WS_GROUP
+    LTEXT           "&Color:",1091,7,157,30,9
+    COMBOBOX        1139,7,168,83,100,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Sample",1073,7,97,175,53,WS_GROUP
+    CTEXT           "",1092,14,111,162,33,SS_NOPREFIX | NOT WS_VISIBLE
+    LTEXT           "Sc&ript:",1094,99,158,30,9
+    COMBOBOX        1140,99,168,83,53,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_POSITION DIALOG DISCARDABLE  0, 0, 147, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Suggestion Window Position"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "You have moved the suggestion window.\nWhere do you want it to be placed?",
+                    IDC_STATIC,7,7,133,18
+    CONTROL         "Next to the caret.",IDC_CARET,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,31,71,10
+    CONTROL         "At a fixed position.",IDC_FIXED,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,7,43,73,10
+    CONTROL         "Next to the mouse cursor.",IDC_CURSOR,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,7,55,97,10
+    DEFPUSHBUTTON   "OK",IDOK,17,74,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,80,74,50,14
+END
+
+IDD_NEWPASSWORD DIALOG DISCARDABLE  0, 0, 151, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Ignored Word"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Word:",IDC_STATIC,7,6,47,7
+    RTEXT           "Description:",IDC_STATIC,7,26,47,9
+    DEFPUSHBUTTON   "OK",IDOK,14,48,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,86,48,50,14
+    EDITTEXT        IDC_WORD,58,4,85,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_DESCRIPTION,58,24,85,12,ES_AUTOHSCROLL
+END
+
+IDD_APPLICATIONS DIALOG DISCARDABLE  0, 0, 270, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Define Applications"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,212,106,50,14
+    LISTBOX         IDC_APPL_LIST,6,47,195,73,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Add...",IDC_NEW,212,47,49,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,212,64,49,14,WS_DISABLED
+    DEFPUSHBUTTON   "OK",IDOK,212,89,50,14
+    CONTROL         "Only these applications:",IDC_POSITIVE,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY,6,18,91,10
+    CONTROL         "All but these applications:",IDC_NEGATIVE,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY,6,30,96,10
+    CONTROL         "Support all applications.",IDC_ALL,"Button",
+                    BS_AUTORADIOBUTTON | BS_NOTIFY,6,6,91,10
+END
+
+IDD_NEWAPPLICATION DIALOG DISCARDABLE  0, 0, 270, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Application"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,76,83,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,83,50,14
+    LTEXT           "Drag the crosshair over the application window, or browse for the file which runs the application.",
+                    IDC_STATIC,6,7,258,21
+    EDITTEXT        IDC_FILENAME,6,60,235,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,247,60,18,14,BS_NOTIFY
+    ICON            IDI_WINDOW_CROSSHAIR,IDC_WINDOW,114,31,20,20,SS_NOTIFY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 9
+        RIGHTMARGIN, 238
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 92
+    END
+
+    IDD_PROP_DB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_PROP_SUGGESTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_FONT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_POSITION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 140
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,8,1,1
+ PRODUCTVERSION 1,8,1,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Carsten Clasohm\0"
+            VALUE "FileDescription", "LetMeType - Keyboard Utility\0"
+            VALUE "FileVersion", "1.81\0"
+            VALUE "InternalName", "LetMeType\0"
+            VALUE "LegalCopyright", "Copyright © 2002  Carsten Clasohm\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "LetMeType.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "LetMeType\0"
+            VALUE "ProductVersion", "1.81\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""res\\AutoType.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "&Merge...",                   ID_FILE_MERGE
+        MENUITEM "Shortc&ut...",                ID_FILE_SHORTCUT
+        MENUITEM SEPARATOR
+        MENUITEM "S&ettings...",                ID_FILE_SETTINGS
+        MENUITEM "Word &Characters...",         ID_FILE_CHARS
+        MENUITEM "&Import Text...",             ID_FILE_READ
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tCtrl+Q",               ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Read Clipboard\tCtrl+V",     ID_EDIT_PASTE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit",                       ID_EDIT_EDIT
+        MENUITEM "&Delete",                     ID_EDIT_DELETE
+    END
+    POPUP "&Settings"
+    BEGIN
+        MENUITEM "&Suggest",                    ID_OPTIONS_SUGGEST, CHECKED
+        MENUITEM "&Learn Words",                ID_OPTIONS_LEARN, CHECKED
+        MENUITEM "&Monitor Clipboard",          ID_OPTIONS_CLIPBOARD
+        , CHECKED
+        MENUITEM "&Count Keys",                 ID_OPTIONS_COUNTKEYS
+        , CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "Exclude &Passwords...",       ID_OPTIONS_PASSWORDS
+        MENUITEM "Define &applications...",     ID_OPTIONS_APPLICATIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Background Color...",        ID_OPTIONS_BACKCOLOR
+        MENUITEM "&Font...",                    ID_OPTIONS_FONT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "Status &Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&List",                       ID_VIEW_LIST
+        MENUITEM "&Details",                    ID_VIEW_DETAILS, CHECKED
+        POPUP "&Sort"
+        BEGIN
+            MENUITEM "&Alphabetically",             ID_VIEW_SORT_ALPHA
+            MENUITEM "By &Occurences",              ID_VIEW_SORT_OCCURENCES
+            MENUITEM "By A&ge",                     ID_VIEW_SORT_AGE
+            MENUITEM "By &Length",                  ID_VIEW_SORT_LENGTH
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh\tF5",                ID_VIEW_REFRESH
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents",                   ID_HELP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP_TRAY MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Suggest",                     ID_OPTIONS_SUGGEST, CHECKED
+        MENUITEM "Learn Words",                 ID_OPTIONS_LEARN, CHECKED
+        MENUITEM "Settings...",                 ID_FILE_SETTINGS
+        MENUITEM "Help...",                     ID_HELP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "Restore",                     ID_APP_RESTORE
+        MENUITEM "Exit",                        ID_APP_EXIT
+    END
+END
+
+IDR_SUGGESTIONS MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Suggest",                    ID_OPTIONS_SUGGEST, CHECKED
+        MENUITEM "&Learn Words",                ID_OPTIONS_LEARN, CHECKED
+        MENUITEM "&Settings...",                ID_FILE_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "&Caret",                      ID_POS_CARET
+        MENUITEM "&Fixed Position",             ID_POS_FIXED
+        MENUITEM "C&ursor",                     ID_POS_CURSOR
+    END
+END
+
+IDR_POPUP_LIST MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Edit",                       ID_EDIT_EDIT
+        MENUITEM "&Delete",                     ID_EDIT_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROP_SUGGESTIONS DLGINIT
+BEGIN
+    IDC_POSITION, 0x403, 6, 0
+0x6143, 0x6572, 0x0074, 
+    IDC_POSITION, 0x403, 6, 0
+0x6946, 0x6578, 0x0064, 
+    IDC_POSITION, 0x403, 7, 0
+0x7543, 0x7372, 0x726f, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "LetMeType\n\nVocabulary\nVocabulary (*.lmt)\n.lmt\nLetMeTypeVocabulary\nLetMeType Vocabulary"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "LetMeType"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Creates a new document\nNew"
+    ID_FILE_OPEN            "Opens an existing document\nOpen"
+    ID_FILE_CLOSE           "Closes the document\nClose"
+    ID_FILE_SAVE            "Saves the document\nSave"
+    ID_FILE_SAVE_AS         "Saves the document with a new name\nSave As"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Displays the program information and copyright\nInfo"
+    ID_APP_EXIT             "Quits the application; prompts to save document\nQuit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Opens this document"
+    ID_FILE_MRU_FILE2       "Opens this document"
+    ID_FILE_MRU_FILE3       "Opens this document"
+    ID_FILE_MRU_FILE4       "Opens this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Shows or hides the toolbar\nToolbar"
+    ID_VIEW_STATUS_BAR      "Shows or hides the status bar\nStatus Bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Changes the window size"
+    AFX_IDS_SCMOVE          "Changes the window position"
+    AFX_IDS_SCMINIMIZE      "Reduces the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarges the window to full size"
+    AFX_IDS_SCCLOSE         "Closes the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restores the window to normal size"
+    IDS_CHARACTERS          "keystrokes"
+    IDS_WORDS               "words"
+    IDS_DAYS                "days"
+    IDS_TIMES               "times"
+    IDS_PWERRMSG            "The word cannot be added because ""%s"" contains the same or a similar word."
+    IDS_PWERRTITLE          "Error"
+    IDS_ILLCHAR             "Invalid character: '%c'\nThe entered word must only contain letters, digits and a limited set of other characters."
+    IDS_DLLERR              "Cannot load LMTHOOK.DLL."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS_ACTIVATED    "(De)activates keyboard monitoring\n(De)activate"
+    ID_FILE_SETTINGS        "Changes the vocabulary settings\nVocabulary settings"
+    ID_OPTIONS_PASSWORDS    "Ignore certain words.\nIgnore"
+    ID_FILE_CHARS           "Changes the word characters\nWord characters"
+    ID_HELP_HELP            "Displays the online documentation\nHelp"
+    ID_OPTIONS_COUNTKEYS    "Count keystrokes\nCount"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_LIST            "Displays words in a concise list\nList"
+    ID_VIEW_DETAILS         "Displays words in a detailed list\nDetails"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DECYPHER_ERROR      "This version of LetMeType cannot read encrypted files.\nPlease use LetMeType 1.77, and save this file unencrypted."
+    IDS_SPY_HOOK_NOT_SET    "Unable to start LMTHOOK.DLL."
+    IDS_WORD                "Word"
+    IDS_OCCURENCES          "Occurences"
+    IDS_AGE                 "Age"
+    IDS_FORECOLOR           "Text Color"
+    IDS_BACKCOLOR           "Background Color"
+    IDS_TOOLONG             "The entered word is too long (>%d characters)."
+    IDS_DUPE                "The entered word already exists in the database."
+    IDS_SHORTCUT_FILTERS    "Shortcut (*.lnk)|*.lnk|All Files (*.*)|*.*||"
+    IDS_TEXT_FILTERS        "Text Files (*.txt)|*.txt|All Files (*.*)|*.*||"
+    IDS_EXE_FILTERS         "Executable Files (.exe;.dll;.ocx)|*.exe;*.dll;*.ocx|All Files (*.*)|*.*||"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_REFRESH         "Refreshes the displayed word list\nRefresh"
+    ID_EDIT_DELETE          "Deletes the selected word\nDelete"
+    ID_EDIT_EDIT            "Edits the selected word\nEdit"
+    ID_VIEW_SORT_ALPHA      "Sorts all displayed words alphabetically\nAlphabetically"
+    ID_VIEW_SORT_OCCURENCES "Sorts all displayed words by their occurences\nOccurences"
+    ID_VIEW_SORT_AGE        "Sorts all displayed words by their age\nAge"
+    ID_VIEW_SORT_LENGTH     "Sorts all displayed words by their length\nLength"
+    ID_FILE_SHORTCUT        "Creates a shortcut for the document\nShortcut"
+    ID_FILE_READ            "Imports words from a text file\nImport"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_PASTE           "Imports words from the clipboard\nPaste"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS_BACKCOLOR    "Suggestion window background color\nBackground Color"
+    ID_OPTIONS_TEXTCOLOR    "Changes the suggestion window's text color\nText Color"
+    ID_FILE_FIXEDPOS        "Fixed suggestion window position\nFixed Position"
+    ID_OPTIONS_FONT         "Suggestion window font\nFont"
+    ID_OPTIONS_CLIPBOARD    "Automatically read words from the clipboard\nPaste"
+    ID_APP_RESTORE          "Restores the window to normal size\nRestore"
+    ID_OPTIONS_SUGGEST      "Make suggestions\nSuggest"
+    ID_OPTIONS_LEARN        "Learn new words\nLearn"
+    ID_FILE_MERGE           "Adds words from a different vocabulary file\nMerge"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SETTINGS            "Settings"
+    IDS_URL                 "http://www.clasohm.com/lmt/en/"
+    IDS_LANGUAGE            "en"
+    IDS_NO_LEARN            "not learning words"
+    IDS_OPENDOC_ERROR       "Document ""%s"" could not be opened."
+    IDS_READ_ERROR          "Error while reading the file."
+    IDS_VERSION_ERROR       "The file was created by a newer version of LetMeType and can therefore not be opened."
+    IDS_VOCABULARY_FILTERS  "Vocabulary (*.lmt)|*.lmt|All Files (*.*)|*.*||"
+    IDS_NO_SUGGEST          "no suggestions"
+    IDS_DEACTIVATED         "deactivated"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS_APPLICATIONS "Limit LetMeType to certain applications.\nSelect applications"
+END
+
+#endif    // Englisch (USA) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\AutoType.rc2"  // non-Microsoft Visual C++ edited resources
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#if defined(AFX_TARG_DEU)
+#include "l.deu\afxres.rc"
+#else
+#include "afxres.rc"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
